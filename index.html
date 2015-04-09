@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jose Search</title>
+  <meta name="description" content="Everything Jose – in one place">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <style>.button,.input{box-sizing:border-box}.button,.button:visited{color:#444}.button,.buttons,.disclaimer,.logo{text-align:center}html{font-family:arial,sans-serif}.wrapper{margin:0 auto;max-width:500px}h1{font-weight:400}.input{font:16px arial,sans-serif;width:100%;padding:6px 9px;background-color:#fff;border:1px solid #d9d9d9;border-top-color:silver;height:28px;line-height:28px;vertical-align:top;outline:0}.input:focus{border-color:#4d90fe}.button{display:inline-block;background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-color:#f5f5f5;background-image:linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);-webkit-border-radius:2px;-webkit-user-select:none;border:1px solid #dcdcdc;border:1px solid rgba(0,0,0,.1);border-radius:2px;cursor:default;font-size:11px;font-weight:700;margin:11px 8px;min-width:54px;padding:0 8px;height:29px;line-height:27px;outline:0;text-decoration:none}.button:hover{background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);-webkit-box-shadow:0 1px 1px rgba(0,0,0,.1);background-color:#f8f8f8;background-image:linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);border:1px solid #c6c6c6;box-shadow:0 1px 1px rgba(0,0,0,.1);color:#222}.button:focus{border:1px solid #4d90fe;outline:0}.logo{margin:200px auto 25px}@media screen and (max-width:480px){.logo{margin:10px auto 25px}}.logo img{height:95px;width:auto}.disclaimer{font-size:6px;text-transform:uppercase;position:absolute;bottom:5px;left:0;right:0;color:#ccc}.z{color:#156AEC}.l{color:#D33F2A}.a1{color:#FFBA02}.t{color:#156AEC}.a2{color:#009956}.n{color:#D33F2A}.mic{background:url(mic.gif) no-repeat center;background-size:14px 19px;position:relative;height:23px;width:17px;opacity:0.4;float:right;top:-1.55em;right:0.4em;}</style>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="/jose.svg" alt="Logo of Jose Search">
+      </div>
+      <form action="https://www.google.com" method="get">
+        <input class="input" type="text" name="q" id="search" autofocus><span class="mic"></span>
+        <div class="buttons">
+          <input type="submit" class="button" value="Jose Search">
+          <a class="button" href="winning.jpg">I'm Feeling Jose</a>
+        </div>
+      </form>
+
+      <div class="disclaimer">Not affiliated with Google or Jose</div>
+    </div>
+
+    <script>
+      var form = document.querySelector('form');
+      var input = document.getElementById('search');
+
+      form.addEventListener('submit', function(ev) {
+        ev.preventDefault();
+        window.location = 'https://google.com/search?q=jose+' + input.value;
+      });
+    </script>
+</body>
+</html>
